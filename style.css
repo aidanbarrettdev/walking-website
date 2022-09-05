@@ -1,66 +1,184 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 :root {
-  --main-theme: rgba(59, 114, 59, 0.996);
+  --main-theme: rgba(14, 43, 14, 0.996);
   --secondary-theme: rgb(64, 23, 64);
 }
 
 body {
   background-color: var(--main-theme);
-}
-/* navigation */
-.nav {
-  color: white;
-  width: 6rem;
-  height: 100vh;
-  background-color: var(--secondary-theme);
-  transition: width 500ms ease-out;
-}
-.nav-text {
-  display: none;
-  color: white;
-  padding-left: 1rem;
-}
-.nav-icon {
-  color: orange;
-}
-.nav-items {
   display: flex;
   flex-direction: column;
+}
 
-  align-items: center;
-  list-style: none;
+/* navigation */
+.hamburger-menu {
+  width: 100vw;
+  height: 1.5rem;
+  background-color: var(--secondary-theme);
+  color: white;
 }
-.nav-link {
+.nav-items {
+  display: none;
+}
+.nav-icon {
+  margin-left: 15px;
+}
+
+.nav-toggle .nav-items {
+  background-color: var(--secondary-theme);
   display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  height: 15rem;
   align-items: center;
-  height: 8rem;
-  text-decoration: none;
 }
-.nav-link i {
-  margin: 0 0.5rem;
+.nav-text {
+  color: white;
+  font-size: 15px;
 }
-.logo {
-  transition: transform 300ms ease-in;
+
+/* hero  stop here*/
+.hero {
+  margin-top: 50px;
+
+  background-color: var(--main-theme);
+  flex-wrap: wrap;
+  font-family: "Carter One", cursive;
 }
-.logo-link {
-  margin-bottom: 8rem;
+.hero h2,
+h1 {
+  margin: 10px 10px 5px 10px;
+  text-align: center;
+  line-height: 95%;
+  font-size: 2rem;
+  background-image: url(https://cdn.pixabay.com/photo/2020/03/13/11/09/british-landscape-4927649_960_720.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
-.nav-icon:hover {
-  color: rgb(255, 203, 107);
+.hero h1 {
+  font-size: 10rem;
 }
-.nav:hover {
-  width: 12rem;
+
+/* main */
+.weather-section {
+  background-color: red;
 }
-.nav:hover .nav-text {
-  display: flex;
+.info-section {
+  background-color: blue;
 }
-.nav:hover .logo {
-  color: rgb(255, 203, 107);
-  transform: rotateY(180deg);
+.club-section {
+  background-color: yellow;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav {
+    color: white;
+    width: 6rem;
+    height: 100vh;
+    background-color: var(--secondary-theme);
+    transition: width 500ms ease-out;
+  }
+  .nav-text {
+    display: none;
+    color: white;
+    padding-left: 1rem;
+  }
+  .nav-icon {
+    color: orange;
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    list-style: none;
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    text-decoration: none;
+  }
+  .nav-link i {
+    margin: 0 0.5rem;
+  }
+  .logo {
+    transition: transform 300ms ease-in;
+  }
+  .logo-link {
+    margin-bottom: 8rem;
+  }
+  .nav-icon:hover {
+    color: rgb(255, 203, 107);
+  }
+  .nav:hover {
+    width: 12rem;
+  }
+  .nav:hover .nav-text {
+    display: flex;
+  }
+  .nav:hover .logo {
+    color: rgb(255, 203, 107);
+    transform: rotateY(180deg);
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  /* hero */
+
+  .grid {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--main-theme);
+
+    font-family: "Carter One", cursive;
+
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero h1 {
+    font-size: 20rem;
+  }
+
+  /* main */
+  .weather-section {
+    background-color: red;
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  .info-section {
+    background-color: blue;
+    grid-column: 1/4;
+    grid-row: 5/6;
+  }
+  .club-section {
+    background-color: yellow;
+    grid-column: 1/4;
+    grid-row: 6/7;
+  }
 }
