@@ -8,6 +8,7 @@
 :root {
   --main-theme: rgba(14, 43, 14, 0.996);
   --secondary-theme: rgb(64, 23, 64);
+  --info-theme: rgba(55, 134, 55, 0.996);
 }
 
 body {
@@ -28,6 +29,7 @@ body {
 }
 .nav-icon {
   margin-left: 15px;
+  color: orange;
 }
 
 .nav-toggle .nav-items {
@@ -43,7 +45,6 @@ body {
   font-size: 15px;
 }
 
-/* hero  stop here*/
 .hero {
   margin-top: 50px;
 
@@ -67,13 +68,42 @@ h1 {
   font-size: 10rem;
 }
 
-/* main */
+/* main-weather */
 .weather-section {
   background-color: red;
 }
+/* main-info */
 .info-section {
-  background-color: blue;
+  background-color: var(--info-theme);
 }
+
+.info-section-img {
+  width: 100%;
+  height: 180px;
+}
+.img-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 94%;
+  gap: 10px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 0 10px 10px;
+}
+.scroll-snap {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 10px;
+}
+.scroll-snap > * {
+  scroll-snap-align: start;
+}
+.img-element {
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* main-club */
 .club-section {
   background-color: yellow;
 }
