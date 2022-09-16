@@ -197,8 +197,10 @@ h1 {
     flex-direction: row;
   }
   .nav {
+    position: sticky;
+    top: 0;
     color: white;
-    width: 6rem;
+    width: 4rem;
     height: 100vh;
     background-color: var(--secondary-theme);
     transition: width 500ms ease-out;
@@ -252,24 +254,15 @@ h1 {
   /* hero */
 
   .grid {
-    width: 100vw;
-    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 3fr 2fr 1.5fr 0.2fr;
   }
   .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color: var(--main-theme);
-
-    font-family: "Carter One", cursive;
-
-    grid-column: 1/4;
-    grid-row: 1/4;
   }
   .hero h2 {
     font-size: 2rem;
@@ -278,20 +271,59 @@ h1 {
     font-size: 20rem;
   }
 
-  /* main */
+  /* weather */
+
   .weather-section {
-    background-color: red;
-    grid-column: 1/4;
-    grid-row: 4/5;
+    margin-bottom: 0px;
   }
-  .info-section {
-    background-color: blue;
-    grid-column: 1/4;
-    grid-row: 5/6;
+  .weather-input-btn {
+    background-color: orange;
   }
+  .weather-input-btn:hover {
+    background-color: var(--nav-hover);
+  }
+
+  /* info */
+
+  .info-section-img {
+    height: 500px;
+  }
+  .img-slider {
+    grid-auto-columns: 64%;
+  }
+  ::-webkit-scrollbar {
+    width: 0.5vw;
+    height: 0.7vw;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--nav-hover);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--secondary-theme);
+  }
+
+  /* club */
   .club-section {
-    background-color: yellow;
-    grid-column: 1/4;
-    grid-row: 6/7;
+    margin: 0px 50px 0px 50px;
+    border-radius: 1rem;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .form-submit-btn {
+    width: 7rem;
+    margin-left: 7rem;
+
+    border-radius: 0px;
+    color: var(--main-theme);
+    background-color: orange;
+  }
+  .form-submit-btn:hover {
+    background-color: var(--nav-hover);
   }
 }
+
+/* footer */
