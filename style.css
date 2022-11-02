@@ -77,11 +77,19 @@ h1 {
   background-color: var(--main-theme);
   margin-top: 3rem;
   padding: 5px;
+  
 }
 .info-section-title {
   color: white;
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
   padding: 1rem;
+}
+.info-section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  
 }
 
 .info-section-img {
@@ -120,6 +128,7 @@ h1 {
 .weather-section h1 {
   margin-bottom: 2rem;
   color: white;
+  font-size: 2rem;
 }
 
 .weather-input {
@@ -278,6 +287,7 @@ h1 {
   .weather-section {
     margin-bottom: 0px;
   }
+  
   .weather-input-btn {
     background-color: orange;
   }
@@ -286,6 +296,7 @@ h1 {
   }
 
   /* info */
+
 
   .info-section-img {
     height: 500px;
